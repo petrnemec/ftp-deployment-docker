@@ -5,7 +5,7 @@ RUN apt-get update \
   && pecl install ssh2-1.1.2 \
   && docker-php-ext-enable ssh2 \
   && curl -sS https://getcomposer.org/installer \
-    | php -- --install-dir=/usr/local/bin --filename=composer
+    | php -- --install-dir=/usr/local/bin --filename=composer \
   && composer global require "dg/ftp-deployment:^3.1" \
-  && composer clear-cache
+  && composer clear-cache \
   && ln -s ~/.composer/vendor/bin/deployment /usr/local/bin/deployment
