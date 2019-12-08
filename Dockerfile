@@ -9,7 +9,7 @@ RUN apt-get update && apt-get -y install \
         git \
         php-cli \
         php-ssh2 \
-        unzip
+        unzip \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Composer
